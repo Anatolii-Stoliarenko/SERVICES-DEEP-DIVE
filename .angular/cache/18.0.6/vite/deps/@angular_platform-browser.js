@@ -8,7 +8,7 @@ import {
   isPlatformServer,
   parseCookieValue,
   setRootDomAdapter
-} from "./chunk-AL46KR6J.js";
+} from "./chunk-GO5BZCF2.js";
 import {
   APP_BOOTSTRAP_LISTENER,
   APP_ID,
@@ -43,6 +43,10 @@ import {
   Version,
   ViewEncapsulation$1,
   XSS_SECURITY_URL,
+  __async,
+  __objRest,
+  __spreadProps,
+  __spreadValues,
   _global,
   _sanitizeHtml,
   _sanitizeUrl,
@@ -82,13 +86,7 @@ import {
   ɵɵdefineInjector,
   ɵɵdefineNgModule,
   ɵɵinject
-} from "./chunk-6FXRMNBB.js";
-import {
-  __async,
-  __objRest,
-  __spreadProps,
-  __spreadValues
-} from "./chunk-5JEZL4LT.js";
+} from "./chunk-DFUNHD6K.js";
 
 // node_modules/@angular/common/fesm2022/http.mjs
 var HttpHandler = class {

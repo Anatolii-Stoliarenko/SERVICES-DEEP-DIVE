@@ -1,7 +1,8 @@
-import { Component, EventEmitter, Output, input } from "@angular/core";
+import { Component, EventEmitter, Output, inject, input } from "@angular/core";
 
 import { TaskItemComponent } from "./task-item/task-item.component";
-import { Task } from "../task.model";
+import { Task, TaskStatus, ViewMode } from "../task.model";
+import { TasksService } from "../tasks.service";
 
 @Component({
   selector: "app-tasks-list",
@@ -12,14 +13,21 @@ import { Task } from "../task.model";
 })
 export class TasksListComponent {
   tasks = input.required<Task[]>();
-  @Output() selectedFilter = new EventEmitter<string>();
+  private taskSefvice = inject(TasksService);
 
-  // selectedFilter = signal<string>("all");
+  @Output() chagedViewMode = new EventEmitter();
+  @Output() chagedTaskStatus = new EventEmitter();
+
+  taskService = inject(TasksService);
 
   constructor() {}
 
-  onChangeTasksFilter(filter: string) {
-    // this.selectedFilter.set(filter);
-    this.selectedFilter.emit(filter);
+  onChangeViewModel(veiwMode: string) {
+    this.taskSefvice.changeViewMode(veiwMode as ViewMode);
+    this.chagedViewMode.emit();
+  }
+
+  onChagedStatus() {
+    this.chagedTaskStatus.emit();
   }
 }

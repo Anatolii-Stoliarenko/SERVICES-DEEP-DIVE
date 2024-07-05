@@ -8,10 +8,16 @@
 
 html {
   font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
 body {
   margin: 0;
   background-color: #2d2b24;
   color: #f5f1e0;
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }

@@ -1,2 +1,6 @@
 <app-new-task (newTask)="onNewTask($event)" />
-<app-tasks-list [tasks]="tasks" (selectedFilter)="onCgangeStatus($event)" />
+<app-tasks-list
+  [tasks]="tasks"
+  (chagedViewMode)="onCgangedViewMode()"
+  (chagedTaskStatus)="onChagedTaskStatus()"
+/>
